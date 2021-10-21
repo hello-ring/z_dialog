@@ -18,7 +18,9 @@ class _HomePageState extends State<HomePage> {
         padding: const EdgeInsets.all(10.0),
         child: ListView(
           children: [
-            const SizedBox(height: 10,),
+            const SizedBox(
+              height: 10,
+            ),
             GlobalButton(
               text: 'AlertDialog',
               onPressed: () async {
@@ -28,12 +30,14 @@ class _HomePageState extends State<HomePage> {
                 );
               },
             ),
-            const SizedBox(height: 10,),
+            const SizedBox(
+              height: 10,
+            ),
             GlobalButton(
               text: 'BottomDialog',
               onPressed: () async {
-                ZAlert.showBottomDialog(context, options: ['呵呵'],
-                    onClick: (i, value) {
+                ZAlert.showBottomDialog(context,
+                    options: ['Ring', 'Koa', 'Flutter'], onClick: (i, value) {
                   Navigator.of(context).pop();
                 });
               },
