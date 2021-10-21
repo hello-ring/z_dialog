@@ -24,10 +24,26 @@ class _HomePageState extends State<HomePage> {
             GlobalButton(
               text: 'AlertDialog',
               onPressed: () async {
-                ZAlert.showAlert(
-                  context,
-                  title: 'AlertDialog',
-                );
+                ZDialog.showAlert(context,
+                    title: 'Flutter',
+                    content:
+                        'Flutter is Google UI toolkit for building beautiful, natively compiled applications for mobile, web, desktop, and embedded devices from a single codebase.',
+                    actions: <Widget>[
+                      ZButton(
+                        isConfirm: true,
+                        text: '确定',
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                        },
+                      ),
+                      ZButton(
+                        isConfirm: false,
+                        text: '取消',
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                        },
+                      ),
+                    ]);
               },
             ),
             const SizedBox(
@@ -36,7 +52,7 @@ class _HomePageState extends State<HomePage> {
             GlobalButton(
               text: 'BottomDialog',
               onPressed: () async {
-                ZAlert.showBottomDialog(context,
+                ZDialog.showBottomDialog(context,
                     options: ['Ring', 'Koa', 'Flutter'], onClick: (i, value) {
                   Navigator.of(context).pop();
                 });
