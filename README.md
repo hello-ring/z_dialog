@@ -11,15 +11,17 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages). 
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
-
 ## z_dialog
 
 [![ZDialog](https://img.shields.io/github/v/tag/hello-ring/z_dialog?style=flat-square)](https://github.com/hello-ring/z_dialog)
 [![pub package](https://img.shields.io/pub/v/z_dialog?style=flat-square)](https://pub.dev/packages/z_dialog)
 
 z_dialog is a brief Dialog
+
+## Example
+![ZDialog]](https://github.com/hello-ring/z_dialog/blob/master/example/screenshot/1.png?raw=true)
+![ZDialog]](https://github.com/hello-ring/z_dialog/blob/master/example/screenshot/2.png?raw=true)
+![ZDialog]](https://github.com/hello-ring/z_dialog/blob/master/example/screenshot/3.png?raw=true)
 
 ## Getting started
 
