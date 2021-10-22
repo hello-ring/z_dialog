@@ -19,9 +19,9 @@ and the Flutter guide for
 z_dialog is a brief Dialog
 
 ## Example
-![ZDialog]](https://github.com/hello-ring/z_dialog/blob/master/example/screenshot/1.png?raw=true)
-![ZDialog]](https://github.com/hello-ring/z_dialog/blob/master/example/screenshot/2.png?raw=true)
-![ZDialog]](https://github.com/hello-ring/z_dialog/blob/master/example/screenshot/3.png?raw=true)
+![ZDialog](https://github.com/hello-ring/z_dialog/blob/master/example/screenshot/1.png?raw=true)
+![ZDialog](https://github.com/hello-ring/z_dialog/blob/master/example/screenshot/2.png?raw=true)
+![ZDialog](https://github.com/hello-ring/z_dialog/blob/master/example/screenshot/3.png?raw=true)
 
 ## Getting started
 
