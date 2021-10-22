@@ -20,9 +20,6 @@ z_dialog is a brief Dialog
 
 ## Example
 <p>
-<img src="https://github.com/hello-ring/z_dialog/blob/master/example/screenshot/1.png?raw=true" width="350" alt="build"></a>
-</p>
-<p>
 <img src="https://github.com/hello-ring/z_dialog/blob/master/example/screenshot/2.png?raw=true" width="350" alt="build"></a>
 </p>
 <p>
