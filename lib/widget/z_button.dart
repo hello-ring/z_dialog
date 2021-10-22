@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:z_dialog/util/color.dart';
 
-class GlobalButton extends StatefulWidget {
+class ZButton extends StatefulWidget {
   final String? text;
   final bool enable;
   final bool loading;
@@ -9,8 +9,7 @@ class GlobalButton extends StatefulWidget {
   final Color bgColor;
   final VoidCallback? onPressed;
   final bool isConfirm;
-
-  const GlobalButton({
+  const ZButton({
     Key? key,
     this.text,
     this.enable = true,
@@ -22,10 +21,10 @@ class GlobalButton extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _GlobalButtonState createState() => _GlobalButtonState();
+  _ZButtonState createState() => _ZButtonState();
 }
 
-class _GlobalButtonState extends State<GlobalButton> {
+class _ZButtonState extends State<ZButton> {
   @override
   Widget build(BuildContext context) {
     if (!widget.isConfirm) {

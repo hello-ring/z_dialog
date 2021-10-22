@@ -1,7 +1,6 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:z_dialog/widget/global_button.dart';
 
 class ZAlertDialog extends StatelessWidget {
   final Widget? title;
@@ -101,21 +100,6 @@ class ZAlertDialog extends StatelessWidget {
         ),
       );
     }
-
-    // if (actions != null) {
-    //   final double spacing = (buttonPadding?.horizontal ?? 16) / 2;
-    //   actionsWidget = Padding(
-    //     padding: actionsPadding!.add(EdgeInsets.all(spacing)),
-    //     child: OverflowBar(
-    //       alignment: actionsAlignment ?? MainAxisAlignment.end,
-    //       spacing: spacing,
-    //       overflowAlignment: OverflowBarAlignment.end,
-    //       overflowDirection: actionsOverflowDirection ?? VerticalDirection.down,
-    //       overflowSpacing: actionsOverflowButtonSpacing ?? 0,
-    //       children: actions!,
-    //     ),
-    //   );
-    // }
 
     final double spacing = (buttonPadding?.horizontal ?? 16) / 2;
     actionsWidget = Padding(
