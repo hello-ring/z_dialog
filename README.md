@@ -16,7 +16,7 @@ know whether this package might be useful for them.
 
 ## z_dialog
 
-[![ZDialog](https://img.shields.io/badge/OpenFlutter-OKToast-blue.svg)](https://github.com/hello-ring/z_dialog)
+[![ZDialog](https://img.shields.io/github/v/tag/hello-ring/z_dialog?style=flat-square)](https://github.com/hello-ring/z_dialog)
 [![pub package](https://img.shields.io/pub/v/z_dialog?style=flat-square)](https://pub.dev/packages/z_dialog)
 
 z_dialog is a brief Dialog
