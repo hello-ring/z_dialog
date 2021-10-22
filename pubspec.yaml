@@ -1,7 +1,7 @@
 name: z_dialog
 description: A new Flutter dialog package.
-version: 0.0.1
-homepage:
+version: 1.0.0
+homepage: https://github.com/hello-ring/z_dialog
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
