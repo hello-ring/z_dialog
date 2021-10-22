@@ -1,4 +1,3 @@
-import 'package:example/widgets/global_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:z_dialog/z_dialog.dart';
@@ -21,7 +20,8 @@ class _HomePageState extends State<HomePage> {
             const SizedBox(
               height: 10,
             ),
-            GlobalButton(
+            ZButton(
+              isDark: true,
               text: 'AlertDialog',
               onPressed: () async {
                 ZDialog.showAlert(context,
@@ -30,14 +30,14 @@ class _HomePageState extends State<HomePage> {
                         'Flutter is Google UI toolkit for building beautiful, natively compiled applications for mobile, web, desktop, and embedded devices from a single codebase.',
                     actions: <Widget>[
                       ZButton(
-                        isConfirm: true,
+                        isDark: true,
                         text: '确定',
                         onPressed: () {
                           Navigator.of(context).pop();
                         },
                       ),
                       ZButton(
-                        isConfirm: false,
+                        isDark: false,
                         text: '取消',
                         onPressed: () {
                           Navigator.of(context).pop();
@@ -49,7 +49,8 @@ class _HomePageState extends State<HomePage> {
             const SizedBox(
               height: 10,
             ),
-            GlobalButton(
+            ZButton(
+              isDark: true,
               text: 'BottomDialog',
               onPressed: () async {
                 ZDialog.showBottomDialog(context,

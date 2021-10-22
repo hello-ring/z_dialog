@@ -1,61 +1,56 @@
 import 'package:flutter/material.dart';
 import 'package:z_dialog/util/color.dart';
 
-class ZButton extends StatefulWidget {
+class ZButton extends StatelessWidget {
   final String? text;
   final bool enable;
-  final bool loading;
   final Color textColor;
-  final Color bgColor;
+  final Color? bgColor;
   final VoidCallback? onPressed;
-  final bool isConfirm;
+  final bool isDark;
   const ZButton({
     Key? key,
     this.text,
     this.enable = true,
     this.onPressed,
-    this.loading = false,
-    this.bgColor = primaryBlack,
+    this.bgColor,
     this.textColor = Colors.white,
-    this.isConfirm = false,
+    this.isDark = false,
   }) : super(key: key);
 
   @override
-  _ZButtonState createState() => _ZButtonState();
-}
-
-class _ZButtonState extends State<ZButton> {
-  @override
   Widget build(BuildContext context) {
-    if (!widget.isConfirm) {
+    if (!isDark) {
       return Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: TextButton(
-          child: Text(widget.text ?? '',
+          child: Text(text ?? '',
               style: const TextStyle(color: primaryCancelBlack, fontSize: 14)),
-          onPressed: widget.enable ? widget.onPressed : null,
+          onPressed: enable ? onPressed : null,
         ),
       );
     }
 
+    Color useBgColor;
+    if (bgColor != null) {
+      useBgColor = bgColor!;
+    } else {
+      if (isDark) {
+        useBgColor = primaryBlack;
+      } else {
+        useBgColor = Colors.white;
+      }
+    }
+
     return MaterialButton(
-        color: widget.isConfirm ? widget.bgColor : Colors.white,
+        color: useBgColor,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
         disabledColor: primaryBlack,
-        onPressed: widget.enable ? widget.onPressed : null,
+        onPressed: enable ? onPressed : null,
         height: 35,
-        child: widget.loading
-            ? const SizedBox(
-                width: 18,
-                height: 18,
-                child: CircularProgressIndicator(
-                  color: Colors.black,
-                  // strokeWidth: ,
-                ),
-              )
-            : Text(
-                widget.text ?? '',
-                style: TextStyle(color: widget.textColor, fontSize: 14),
-              ));
+        child: Text(
+          text ?? '',
+          style: TextStyle(color: textColor, fontSize: 14),
+        ));
   }
 }
