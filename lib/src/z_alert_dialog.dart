@@ -104,13 +104,16 @@ class ZAlertDialog extends StatelessWidget {
     final double spacing = (buttonPadding?.horizontal ?? 16) / 2;
     actionsWidget = Padding(
       padding: actionsPadding!.add(EdgeInsets.all(spacing)),
-      child: OverflowBar(
-        alignment: actionsAlignment ?? MainAxisAlignment.end,
-        spacing: spacing,
-        overflowAlignment: OverflowBarAlignment.end,
-        overflowDirection: actionsOverflowDirection ?? VerticalDirection.down,
-        overflowSpacing: actionsOverflowButtonSpacing ?? 0,
-        children: actions!,
+      child: Container(
+        alignment: AlignmentDirectional.bottomEnd,
+        padding: EdgeInsets.all(spacing),
+        child: OverflowBar(
+          spacing: spacing,
+          overflowAlignment: OverflowBarAlignment.end,
+          overflowDirection: actionsOverflowDirection ?? VerticalDirection.down,
+          overflowSpacing: actionsOverflowButtonSpacing ?? 0,
+          children: actions!,
+        ),
       ),
     );
 
