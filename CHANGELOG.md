@@ -12,3 +12,6 @@ add CustomDialog
 
 ## 1.1.1
 BottomDialog add circular
+
+## 1.1.2
+BottomDialog:Style optimization
