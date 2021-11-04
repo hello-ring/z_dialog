@@ -45,9 +45,8 @@ class ZDialog {
           return Container(
             decoration: BoxDecoration(
                 color: Colors.white,
-                borderRadius: BorderRadius.vertical(
-                    top: Radius.circular(circular),
-                    bottom: Radius.circular(circular))),
+                borderRadius:
+                    BorderRadius.vertical(top: Radius.circular(circular))),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
@@ -67,13 +66,10 @@ class ZDialog {
                                           onClick(i, item);
                                         }
                                       },
-                                      title: ClipRRect(
-                                        borderRadius: BorderRadius.circular(20),
-                                        child: Center(
-                                            child: Text(
-                                          item,
-                                        )),
-                                      ),
+                                      title: Center(
+                                          child: Text(
+                                        item,
+                                      )),
                                     )
                                   ],
                                 ));
@@ -91,13 +87,10 @@ class ZDialog {
                       onClick(-1, '取消');
                     }
                   },
-                  title: ClipRRect(
-                    borderRadius: BorderRadius.circular(20),
-                    child: const Center(
-                        child: Text(
-                      '取消',
-                    )),
-                  ),
+                  title: const Center(
+                      child: Text(
+                    '取消',
+                  )),
                 )
               ],
             ),
