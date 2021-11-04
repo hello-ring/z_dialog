@@ -63,6 +63,39 @@ ZAlert.showBottomDialog(context, options: ['Ring','Koa','Flutter'],
     onClick: (i, value) {
     Navigator.of(context).pop();
 });
+
+ZDialog.showCustomDialog(context,
+    title: 'Custom',
+    customWidget: Column(
+        children: [
+        Padding(
+            padding: const EdgeInsets.all(18.0),
+            child: Image.network(
+                'https://flutter.cn/asset/flutter-hero-laptop2.png'),
+        ),
+        Text('Custom Widget')
+        ],
+    ),
+    actions: <Widget>[
+        ZButton(
+            isDark: true,
+            text: 'Ok',
+            onPressed: () {
+                Navigator.of(context).pop();
+            },
+        ),
+        TextButton(
+            onPressed: () {
+                Navigator.of(context).pop();
+            },
+            child: Padding(
+                padding: const EdgeInsets.only(left: 20, right: 20),
+                child: Text(
+                    'Cancel',
+                    style: TextStyle(color: Colors.grey),
+                ),
+            ))
+    ]);
 ```
 
 ## information

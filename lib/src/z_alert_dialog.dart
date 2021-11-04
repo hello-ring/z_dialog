@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 class ZAlertDialog extends StatelessWidget {
   final Widget? title;
   final Widget? content;
+  final Widget? customWidget;
   final String? leftBtnTxt;
   final String? rightBtnTxt;
   final TextStyle? titleTextStyle;
@@ -32,6 +33,7 @@ class ZAlertDialog extends StatelessWidget {
     this.actionsOverflowButtonSpacing,
     this.leftBtnTxt,
     this.rightBtnTxt,
+    this.customWidget,
   }) : super(key: key);
 
   static const RoundedRectangleBorder _defaultDialogShape =
@@ -101,6 +103,8 @@ class ZAlertDialog extends StatelessWidget {
       );
     }
 
+    if (customWidget != null) {}
+
     final double spacing = (buttonPadding?.horizontal ?? 16) / 2;
     actionsWidget = Padding(
       padding: actionsPadding!.add(EdgeInsets.all(spacing)),
@@ -127,6 +131,7 @@ class ZAlertDialog extends StatelessWidget {
           children: <Widget>[
             if (title != null) titleWidget!,
             if (content != null) contentWidget!,
+            if (customWidget != null) customWidget!,
             if (actions != null) actionsWidget,
           ],
         ),

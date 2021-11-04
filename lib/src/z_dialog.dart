@@ -94,4 +94,29 @@ class ZDialog {
           );
         });
   }
+
+  static void showCustomDialog(BuildContext context,
+      {String title = '',
+      String content = '',
+      String leftText = '取消',
+      String rightText = '确认',
+      Widget? customWidget,
+      List<Widget>? actions,
+      _ClickCallBack? clickCallback,
+      _DismissCallBack? dismissCallBack}) {
+    showDialog(
+        context: context,
+        builder: (context) {
+          return ZAlertDialog(
+            title: Text(title),
+            customWidget: customWidget,
+            actions: actions,
+          );
+        }).then((value) {
+      if (dismissCallBack == null) {
+        return;
+      }
+      dismissCallBack.call();
+    });
+  }
 }
