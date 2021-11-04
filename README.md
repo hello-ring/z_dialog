@@ -25,13 +25,11 @@ z_dialog is a brief Dialog
 <p>
 <img src="https://github.com/hello-ring/z_dialog/blob/master/example/screenshot/3.png?raw=true" width="350" alt="build"></a>
 </p>
+<p>
+<img src="https://github.com/hello-ring/z_dialog/blob/master/example/screenshot/4.png?raw=true" width="350" alt="build"></a>
+</p>
 
 ## Getting started
-
-```dart
-dependencies:
-  z_dialog: ^1.0.0
-```
 
 ## Usage
 
