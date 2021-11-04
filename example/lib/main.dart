@@ -72,6 +72,7 @@ class _HomePageState extends State<HomePage> {
               text: 'BottomDialog',
               onPressed: () async {
                 ZDialog.showBottomDialog(context,
+                    circular: 12,
                     options: ['Ring', 'Koa', 'Flutter'], onClick: (i, value) {
                   Navigator.of(context).pop();
                 });

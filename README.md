@@ -29,8 +29,6 @@ z_dialog is a brief Dialog
 <img src="https://github.com/hello-ring/z_dialog/blob/master/example/screenshot/4.png?raw=true" width="350" alt="build"></a>
 </p>
 
-## Getting started
-
 ## Usage
 
 to `/example` folder. 
@@ -57,7 +55,10 @@ ZDialog.showAlert(context,
         ),
     ]);
 
-ZAlert.showBottomDialog(context, options: ['Ring','Koa','Flutter'],
+ZAlert.showBottomDialog(
+    context, 
+    circular: 12,
+    options: ['Ring','Koa','Flutter'],
     onClick: (i, value) {
     Navigator.of(context).pop();
 });

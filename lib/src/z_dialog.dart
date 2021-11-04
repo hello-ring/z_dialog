@@ -35,62 +35,72 @@ class ZDialog {
 
   ///底部弹出框
   static void showBottomDialog(BuildContext context,
-      {List<String>? options, _ClickCallBack? onClick}) async {
+      {double circular = 10.0,
+      List<String>? options,
+      _ClickCallBack? onClick}) async {
     await showModalBottomSheet(
+        backgroundColor: Colors.transparent,
         context: context,
         builder: (context) {
-          return Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Column(
-                mainAxisSize: MainAxisSize.min, //最小尺度占用空间
-                children: options != null
-                    ? options
-                        .asMap()
-                        .map((i, item) {
-                          return MapEntry(
-                              i,
-                              Column(
-                                children: [
-                                  ListTile(
-                                    onTap: () {
-                                      if (onClick != null) {
-                                        onClick(i, item);
-                                      }
-                                    },
-                                    title: ClipRRect(
-                                      borderRadius: BorderRadius.circular(20),
-                                      child: Center(
-                                          child: Text(
-                                        item,
-                                      )),
-                                    ),
-                                  )
-                                ],
-                              ));
-                        })
-                        .values
-                        .toList()
-                    : [],
-              ),
-              const Divider(
-                height: 1,
-              ),
-              ListTile(
-                onTap: () {
-                  if (onClick != null) {
-                    onClick(-1, '取消');
-                  }
-                },
-                title: ClipRRect(
-                  borderRadius: BorderRadius.circular(20),
-                  child: const Center(
-                      child: Text(
-                    '取消',
-                  )),
+          return Container(
+            decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.vertical(
+                    top: Radius.circular(circular),
+                    bottom: Radius.circular(circular))),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Column(
+                  mainAxisSize: MainAxisSize.min, //最小尺度占用空间
+                  children: options != null
+                      ? options
+                          .asMap()
+                          .map((i, item) {
+                            return MapEntry(
+                                i,
+                                Column(
+                                  children: [
+                                    ListTile(
+                                      onTap: () {
+                                        if (onClick != null) {
+                                          onClick(i, item);
+                                        }
+                                      },
+                                      title: ClipRRect(
+                                        borderRadius: BorderRadius.circular(20),
+                                        child: Center(
+                                            child: Text(
+                                          item,
+                                        )),
+                                      ),
+                                    )
+                                  ],
+                                ));
+                          })
+                          .values
+                          .toList()
+                      : [],
                 ),
-              )
-            ],
+                const Divider(
+                  height: 1,
+                ),
+                ListTile(
+                  onTap: () {
+                    if (onClick != null) {
+                      onClick(-1, '取消');
+                    }
+                  },
+                  title: ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: const Center(
+                        child: Text(
+                      '取消',
+                    )),
+                  ),
+                )
+              ],
+            ),
           );
         });
   }

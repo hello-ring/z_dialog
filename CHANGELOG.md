@@ -9,3 +9,6 @@ sync OverflowBar api change
 
 ## 1.1.0
 add CustomDialog
+
+## 1.1.1
+BottomDialog add circular
