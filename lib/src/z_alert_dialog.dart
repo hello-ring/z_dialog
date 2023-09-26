@@ -70,7 +70,7 @@ class ZAlertDialog extends StatelessWidget {
         child: DefaultTextStyle(
           style: titleTextStyle ??
               dialogTheme.titleTextStyle ??
-              theme.textTheme.headline6!,
+              theme.textTheme.titleLarge!,
           child: Semantics(
             container: true,
             child: title,
@@ -94,7 +94,7 @@ class ZAlertDialog extends StatelessWidget {
         child: DefaultTextStyle(
           style: contentTextStyle ??
               dialogTheme.contentTextStyle ??
-              theme.textTheme.subtitle1!,
+              theme.textTheme.titleMedium!,
           child: Semantics(
             container: true,
             child: content,

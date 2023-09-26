@@ -15,3 +15,7 @@ BottomDialog add circular
 
 ## 1.1.2
 BottomDialog:Style optimization
+
+## 1.1.3
+fix warnings
+upgrade gradle
